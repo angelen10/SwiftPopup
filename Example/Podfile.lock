@@ -1,23 +1,16 @@
 PODS:
-  - SnapKit (5.0.0)
-  - SwiftPopup (5.0.0):
-    - SnapKit (~> 5.0.0)
+  - SwiftPopup (5.0.0)
 
 DEPENDENCIES:
   - SwiftPopup (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SnapKit
 
 EXTERNAL SOURCES:
   SwiftPopup:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
-  SwiftPopup: 31874508c0d91788edf71419a5bbeb3ebd498ab9
+  SwiftPopup: 28ccb168a5ffe101c7950cc674601152de24d225
 
 PODFILE CHECKSUM: e4730f76fd2531ff5a5845f387c81695e7b468e1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.16.2

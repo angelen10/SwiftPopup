@@ -18,5 +18,4 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/CatchZeng/SwiftPopup.git', :tag => s.version.to_s }
   s.ios.deployment_target = '10.0'
   s.source_files = 'SwiftPopup/Classes/**/*'
-  s.dependency 'SnapKit', '~> 5.0.0'
 end

@@ -1,7 +1,7 @@
 {
   "name": "SwiftPopup",
   "version": "5.0.0",
-  "swift_version": "5.0",
+  "swift_versions": "5.0",
   "summary": "Swift Popup.",
   "description": "Swift fully customized popup view controller.",
   "homepage": "https://github.com/CatchZeng/SwiftPopup",
@@ -20,9 +20,5 @@
     "ios": "10.0"
   },
   "source_files": "SwiftPopup/Classes/**/*",
-  "dependencies": {
-    "SnapKit": [
-      "~> 5.0.0"
-    ]
-  }
+  "swift_version": "5.0"
 }

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SnapKit
 
 open class SwiftPopupPresentationController: UIPresentationController {
     
@@ -21,14 +20,24 @@ open class SwiftPopupPresentationController: UIPresentationController {
     // MARK: Override Methods
     
     override open func presentationTransitionWillBegin() {
-        if let containerView = containerView {
-            containerView.insertSubview(backgroundView, at: 0)
-            backgroundView.snp.makeConstraints { (make) in
-                make.edges.equalTo(containerView).inset(UIEdgeInsets.zero)
-            }
-            
-            excuteBackgroundAnimation()
+        guard let containerView else {
+            return
         }
+        
+        containerView.insertSubview(backgroundView, at: 0)
+        
+        // Disable autoresizing mask translation
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Set up constraints using NSLayoutConstraint
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor)
+        ])
+        
+        excuteBackgroundAnimation()
     }
     
     override open func dismissalTransitionWillBegin() {
